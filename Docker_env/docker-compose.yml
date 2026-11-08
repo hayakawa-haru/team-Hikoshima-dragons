@@ -1,0 +1,8 @@
+services:
+  web:
+    build: ./django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ../kataruAI:/KataruAI_work
+    ports:
+      - "8000:8000"
