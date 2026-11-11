@@ -6,3 +6,27 @@ services:
       - ../kataruAI:/KataruAI_work
     ports:
       - "8000:8000"
+    env_file: .env        # 追加
+    depends_on:           # 追加
+      - db
+
+  db:                     # 追加
+    image: postgres:16
+    env_file: .env        # POSTGRES_* をそのまま使う
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  frontend:               # 追加
+    image: node:22
+    working_dir: /app
+    command: sh -c "npm ci && npm run dev -- --host"
+    volumes:
+      - ../kataruAI/frontend:/app
+      - /app/node_modules  # Windows側のnode_modulesと混ぜない
+    ports:
+      - "5173:5173"
+    depends_on:
+      - web
+
+volumes:
+  db-data:
