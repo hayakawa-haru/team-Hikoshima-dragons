@@ -1,6 +1,7 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
 # DB（各自のローカルデータ）
 db.sqlite3
