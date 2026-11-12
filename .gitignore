@@ -4,7 +4,8 @@ __pycache__/
 *$py.class
 
 # DB（各自のローカルデータ）
-db.sqlite3
+*.sqlite3
+*.db
 
 # 環境変数・秘密情報
 .env
