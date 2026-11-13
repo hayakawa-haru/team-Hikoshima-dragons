@@ -1,0 +1,7 @@
+DJANGO_SECRET_KEY=django-insecure-#1u$kkm2ullyg!$08t@u^9nj+lih)zmx$t8ia_3iy--ckgyr*6
+DJANGO_DEBUG=1
+GEMINI_API_KEY=
+POSTGRES_DB=kataru
+POSTGRES_USER=kataru
+POSTGRES_PASSWORD=
+POSTGRES_HOST=db
